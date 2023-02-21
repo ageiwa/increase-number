@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.numbers-wrap {
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    background-color: #a52a2a;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
