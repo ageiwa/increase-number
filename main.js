@@ -1,22 +1,12 @@
-const numberOne = document.querySelector('#value1')
-const numberTwo = document.querySelector('#value2')
-const numberThree = document.querySelector('#value3')
-
-increaseNumber(0.1, 5000, numberOne)
-
-function increaseNumber(numberFrom, numberTo, elem) {
-    let step = (numberFrom / numberTo) * 100
-
-    elem.textContent = Math.round(numberFrom += step)
-
-    // console.log(step)
-    
-    if (numberFrom <= numberTo) {
-        // setTimeout(() => increaseNumber(numberFrom, numberTo, elem), time)
-        requestAnimationFrame(() => increaseNumber(numberFrom, numberTo, elem))
-    }
-    else if (numberFrom > numberTo) {
-        numberFrom = numberTo
-        elem.textContent = numberFrom
-    }
+const config = {
+    duration: 2,
+    useGrouping: false
 }
+
+const value1 = new CountUp('value1', 100, config);
+const value2 = new CountUp('value2', 50, config);
+const value3 = new CountUp('value3', 10000, config);
+
+value1.start();
+value2.start();
+value3.start();
